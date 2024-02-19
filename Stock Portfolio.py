@@ -30,7 +30,7 @@ def generate_portfolio(file_path):
     try:
         df = pd.read_excel(file_path)
         portfolio = [Stock(row['Symbol'], row['Price']) for _, row in df.iterrows()]
-        return portfolio  # Added return statement
+        return portfolio  
     except:
         print("There is an error in the file linked. Please try again or modify the file path :>")
         return []
